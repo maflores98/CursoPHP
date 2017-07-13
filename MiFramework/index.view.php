@@ -18,41 +18,38 @@
 
 <body>
 	<header>
-			<h1> ARREGLOS </h1>
+			<h1> ARREGLOS ASOCIATIVOS </h1>
 			<br>
 	</header>
 	
 	<main>
+	<?php foreach($persona as $llave => $valor) {	?>
+	<p> <?= $llave . ': '. $valor ?> </p>
+	<?php } ?>
+		
 
-		<h2>Nombres;</h2>
-		<ul> <!-- lista no ordeneda-->
-			<?php foreach($nombres as $nombre) { ?>
-				<li> <?= $nombre ?> </li>
-				<!-- tambien se puede escribir asi-->
-				<li> <?php echo $nombre ?> </li>
-				<!-- li se usa para dar formato de lista  -->
-			<?php } ?>
-		</ul>
+	<!-- para testear un arreglo -->
+	<pre>
+	<?php var_dump($tareas); ?>	
+	</pre>
 
-		<h2>Animales;</h2>
-		<ol> <!-- lista ordeneda, le agrega un indice a cada valor-->
-			<?php foreach($animales as $animal) : ?>
-				<li> <?= $animal ?> </li>
-				<!-- tambien se puede escribir asi-->
-				<li> <?php echo $animal ?> </li>
-				<!-- li se usa para dar formato de lista  -->
-			<?php endforeach; ?>
-		</ol>
+	<h1>Tareas</h1>
 
-		<p> <?php echo $dato; ?> </p>
-		<p> ¿Existe? <?php echo $existe; ?></p>
-
-
+	<ul>
+	<?php foreach($tareas as $tarea) { ?>
+		<li>
+			<p>Tarea: <?= $tarea['Tarea']; ?></p>
+			<p>Asignado a: <?= $tarea['Asignado']; ?></p>
+			<p>Fecha: <?= $tarea['Fecha']; ?></p>
+		</li>
+	<?php } ?>
+	</ul>
 
 	</main>
 
 	<footer>
 	</footer>
+
 
 
 </body>
