@@ -9,17 +9,51 @@
 			background: #1E4B6A;
 			padding: 1em;
 			text-align: center;
-		}	
+			}	
+			h2 {
+				color: blue;
+			}
 	</style>
 </head>
 
 <body>
 	<header>
-			<h1> <?php echo $saludo . " " . $nombre;  ?> </h1>
+			<h1> ARREGLOS </h1>
 			<br>
-			<?php echo $edad;?> 
-					
 	</header>
+	
+	<main>
+
+		<h2>Nombres;</h2>
+		<ul> <!-- lista no ordeneda-->
+			<?php foreach($nombres as $nombre) { ?>
+				<li> <?= $nombre ?> </li>
+				<!-- tambien se puede escribir asi-->
+				<li> <?php echo $nombre ?> </li>
+				<!-- li se usa para dar formato de lista  -->
+			<?php } ?>
+		</ul>
+
+		<h2>Animales;</h2>
+		<ol> <!-- lista ordeneda, le agrega un indice a cada valor-->
+			<?php foreach($animales as $animal) : ?>
+				<li> <?= $animal ?> </li>
+				<!-- tambien se puede escribir asi-->
+				<li> <?php echo $animal ?> </li>
+				<!-- li se usa para dar formato de lista  -->
+			<?php endforeach; ?>
+		</ol>
+
+		<p> <?php echo $dato; ?> </p>
+		<p> ¿Existe? <?php echo $existe; ?></p>
+
+
+
+	</main>
+
+	<footer>
+	</footer>
+
 
 </body>
 </html>
