@@ -1,34 +1,14 @@
 <?php
+	
 
-//-------------ARREGLOS ANIDADOS
-// son arreglos que continen arreglos como elementos
+//-------------FUNCIONES
 
-
-	$tarea1 = array(
-		'tarea' => 'Terminar el codigo',
-		'asignado' => 'Sergio',
-		'fecha' => '25 jul 2017',
-		'completado' => false
-		);
+//    dd pr convencion de programadores, sgnifica que mate el proceso dump (die dump)
 
 
-	$tarea2 = array(
-		'tarea' => 'Revisar el codigo',
-		'asignado' => 'Pablo',
-		'fecha' => '27 jul 2017',
-		'completado' => true
-		);
+ require 'functions.php';
 
-	$tareas = array(
-		$tarea1, $tarea2,
-		array(
-			'tarea' => 'Subir el codigo',
-			'asignado' => 'Jessica',
-			'fecha' => '27 jul 2017',
-			'completado' => true
-			)
-		);
-
-	require 'index.view.php';
+$resultado  = suma(5,10);
+echo $resultado;
 
 
