@@ -22,7 +22,7 @@
 	</header>
 	
 	<main>
-		<h2>Tareas realizadas</h2>
+		<h2>Tareas NO realizadas</h2>
 		<ul>
 			<?php foreach($tareas as $tarea): ?>
 				<!-- se puede utilizar la palabra continue para que si la condicion se cumple, se salta el bloque dentro del if, y ya no necesita marcar el endif ejemplo: El siguiente codigo mostrara solo las tareas no realizadas--> 
@@ -35,8 +35,25 @@
 						Completado:  <?= ($tarea['completado'] === true) ?'REALIZADO' : 'NO REALIZADO'; ?>
 					</li>
 					<br>
-				
-			<?php endforeach; ?>
+
+				<?php endforeach; ?>
+		</ul>
+
+		<h2>Tareas realizadas</h2>
+		<ul>
+			<?php foreach($tareas as $tarea): ?>
+				<!-- se puede utilizar la palabra continue para que si la condicion se cumple, se salta el bloque dentro del if, y ya no necesita marcar el endif ejemplo: El siguiente codigo mostrara solo las tareas  realizadas--> 
+
+				<?php if($tarea['completado'] !== true) continue; ?>
+					<li>
+						Tarea: <?= $tarea['tarea']; ?> <br>
+						Asignado: <?= $tarea['asignado']; ?> <br>
+						Fecha: <?= $tarea['fecha']; ?> <br>
+						Completado:  <?= ($tarea['completado'] === true) ?'REALIZADO' : 'NO REALIZADO'; ?>
+					</li>
+					<br>
+
+				<?php endforeach; ?>
 		</ul>
 	</main>
 
