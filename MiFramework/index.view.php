@@ -40,6 +40,7 @@
 -->
 
 <!--  Tambien se puede escribir de la siguiente forma, 
+
 					Completado: 
 					<?php if($tarea['completado']) { ?> 
 						TAREA REALIZADA
@@ -48,7 +49,8 @@
 					<?php } ?>
 -->
 
-<!--
+<!-- Tambien se puede escribir de la siguiente forma
+
 					Completado: 
 					<?php if($tarea['completado'] === true): ?> 
 						TAREA REALIZADA
@@ -60,8 +62,9 @@
 -->
 
 
-<!-- tambien se puede escribir de la siguiente forma  --> 
-					Completado:
+<!-- tambien se puede escribir de la siguiente forma  QUE SE LLAMA OPERADOR TERNARIO--> 
+					Completado: 
+					<?= ($tarea['completado'] === true) ?'TAREA REALIZADA' : 'TAREA NO REALIZADA' ; ?>
 
 
 			</li>
