@@ -18,33 +18,57 @@
 
 <body>
 	<header>
-			<h1> ARREGLOS ASOCIATIVOS </h1>
+			<h1> CONDICIONALES </h1>
 			<br>
 	</header>
 	
 	<main>
-	<?php foreach($persona as $llave => $valor) {	?>
-	<p> <?= $llave . ': '. $valor ?> </p>
-	<?php } ?>
-		
+		<h2>Tareas</h2>
+		<ul>
+			<?php foreach($tareas as $tarea): ?>
+			<li>
+				Tarea: <?= $tarea['tarea']; ?> <br>
+				Asignado: <?= $tarea['asignado']; ?> <br>
+				Fecha: <?= $tarea['fecha']; ?> <br>
+<!--
+				Completado: 
+					<?php if($tarea['completado']): ?> 
+						TAREA REALIZADA
+					<?PHP else: ?>
+						TAREA INCOMPLETA
+					<?php endif; ?>
+-->
 
-	<!-- para testear un arreglo -->
-	<pre>
-	<?php var_dump($tareas); ?>	
-	</pre>
+<!--  Tambien se puede escribir de la siguiente forma, 
+					Completado: 
+					<?php if($tarea['completado']) { ?> 
+						TAREA REALIZADA
+					<?PHP } else { ?>
+						TAREA INCOMPLETA
+					<?php } ?>
+-->
 
-	<h1>Tareas</h1>
+<!--
+					Completado: 
+					<?php if($tarea['completado'] === true): ?> 
+						TAREA REALIZADA
+						<?php elseif ($tarea['completado'] === false): ?>
+						TAREA INCOMPLETA
+						<?php else: ?>
+						NO TIENE VALOR
+					<?php endif; ?>
+-->
 
-	<ul>
-	<?php foreach($tareas as $tarea) { ?>
-		<li>
-			<p>Tarea: <?= $tarea['Tarea']; ?></p>
-			<p>Asignado a: <?= $tarea['Asignado']; ?></p>
-			<p>Fecha: <?= $tarea['Fecha']; ?></p>
-		</li>
-	<?php } ?>
-	</ul>
 
+<!-- tambien se puede escribir de la siguiente forma  --> 
+					Completado:
+
+
+			</li>
+			<br>
+			<?php endforeach; ?>
+
+		</ul>
 	</main>
 
 	<footer>
