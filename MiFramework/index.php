@@ -25,7 +25,7 @@
 			'tarea' => 'Subir el codigo',
 			'asignado' => 'Jessica',
 			'fecha' => '27 jul 2017',
-			'completado' => 'a'
+			'completado' => true
 			)
 		);
 

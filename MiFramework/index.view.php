@@ -9,10 +9,9 @@
 			background: #1E4B6A;
 			padding: 1em;
 			text-align: center;
-			}	
-			h2 {
-				color: blue;
 			}
+			h1 {color: orange;}	
+			h2 {color: blue;					}
 	</style>
 </head>
 
@@ -23,58 +22,26 @@
 	</header>
 	
 	<main>
-		<h2>Tareas</h2>
+		<h2>Tareas realizadas</h2>
 		<ul>
 			<?php foreach($tareas as $tarea): ?>
-			<li>
-				Tarea: <?= $tarea['tarea']; ?> <br>
-				Asignado: <?= $tarea['asignado']; ?> <br>
-				Fecha: <?= $tarea['fecha']; ?> <br>
-<!--
-				Completado: 
-					<?php if($tarea['completado']): ?> 
-						TAREA REALIZADA
-					<?PHP else: ?>
-						TAREA INCOMPLETA
-					<?php endif; ?>
--->
+				<!-- se puede utilizar la palabra continue para que si la condicion se cumple, se salta el bloque dentro del if, y ya no necesita marcar el endif ejemplo: El siguiente codigo mostrara solo las tareas no realizadas--> 
 
-<!--  Tambien se puede escribir de la siguiente forma, 
-
-					Completado: 
-					<?php if($tarea['completado']) { ?> 
-						TAREA REALIZADA
-					<?PHP } else { ?>
-						TAREA INCOMPLETA
-					<?php } ?>
--->
-
-<!-- Tambien se puede escribir de la siguiente forma
-
-					Completado: 
-					<?php if($tarea['completado'] === true): ?> 
-						TAREA REALIZADA
-						<?php elseif ($tarea['completado'] === false): ?>
-						TAREA INCOMPLETA
-						<?php else: ?>
-						NO TIENE VALOR
-					<?php endif; ?>
--->
-
-
-<!-- tambien se puede escribir de la siguiente forma  QUE SE LLAMA OPERADOR TERNARIO--> 
-					Completado: 
-					<?= ($tarea['completado'] === true) ?'TAREA REALIZADA' : 'TAREA NO REALIZADA' ; ?>
-
-
-			</li>
-			<br>
+				<?php if($tarea['completado'] === true) continue; ?>
+					<li>
+						Tarea: <?= $tarea['tarea']; ?> <br>
+						Asignado: <?= $tarea['asignado']; ?> <br>
+						Fecha: <?= $tarea['fecha']; ?> <br>
+						Completado:  <?= ($tarea['completado'] === true) ?'REALIZADO' : 'NO REALIZADO'; ?>
+					</li>
+					<br>
+				
 			<?php endforeach; ?>
-
 		</ul>
 	</main>
 
 	<footer>
+	 	<h1><?= 'CONDICIONALES IF'  ?><h1>
 	</footer>
 
 
