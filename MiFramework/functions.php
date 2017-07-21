@@ -37,18 +37,20 @@ function listaTareas($base) {
 	// ejecuta la sentencia preparada
 	$sentencia-> execute();
 	//guarda los datos recuperados
-	$tareas = $sentencia->fetchAll(PDO::FETCH_OBJ);
+	$tareas = $sentencia->fetchAll(PDO::FETCH_CLASS, 'Tarea');
 	return $tareas;
 		
 }
 
 
-function listaTareasCompletadas($base) {
+
+
+function listaAsignados($base) {
 	//prepara la sentencia para su ejecucion
-	$sentencia = $base->prepare('Select * from tareas where completado = 1');
+	$sentencia = $base->prepare('Select * from asignados');
 	// ejecuta la sentencia preparada
 	$sentencia-> execute();
 	//guarda los datos recuperados
-	$tareas = $sentencia->fetchAll(PDO::FETCH_OBJ);
-	return $tareas;
+	$asignado = $sentencia->fetchAll(PDO::FETCH_CLASS, 'Asignado');
+	return $asignado;
 }

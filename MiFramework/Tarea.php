@@ -3,31 +3,15 @@
 
 class Tarea {
 	//dentro de una clase a la variables se les llama Aributos y a las Funciones se les llaman métodos
-	private $id =5; 
-	private $descripcion ='Esto es una tarea';
-	private $asignado = 'Alejandro';
-	private $completado =0;
-	private $fecha = '2017-08-20';
+	private $id; 
+	private $descripcion;
+	private $asignado;
+	private $completado;
+	private $fecha;
 
 //dentro de la clase se pueden hacer metodos que son funciones y que permiten accesar los miembros de la clase que fue declarado como privado
 
 	
-
-	//Constructor   se ejecuta automticamente al instanciar la clase en index.php
-	//public function __construct()
-	//{
-		//este es un constructor vacio
-	//}
-
-	public function __construct($id, $descripcion, $asignado, $completado, $fecha)
-	{
-		//echo " Se ejecuto el constructor";
-		$this->id = $id; 
-		$this->descripcion = $descripcion;
-		$this->asignado= $asignado;
-		$this->compleatado=$completado;
-		$this->fecha=$fecha;
-	}
 
 	public function verAsignado()
 	{

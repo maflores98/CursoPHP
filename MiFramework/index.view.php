@@ -24,17 +24,22 @@
 	<main>
 		<?php foreach($tareas as $tarea): ?>
 			<li> 
-				<?= $tarea->descripcion; ?>
+				<?= $tarea->getDescripcion(); ?>
+				<?= $tarea->getAsignado(); ?>
+				<?= $tarea->getCompletado(); ?>
+				<?= $tarea->getFecha(); ?>
 			</li>
 		<?php  endforeach; ?>
 
 <br>
 
-		<?php foreach($tareasC as $tareaC): ?>
+		<?php foreach($asignados as $asignado): ?>
 			<li> 
-				<?= $tareaC->descripcion; ?>
+				<?= $asignado->getNombre(); ?>
+				<?= $asignado->getPuesto(); ?>
 			</li>
 		<?php  endforeach; ?>
+
 	</main>
 
 	<footer>
