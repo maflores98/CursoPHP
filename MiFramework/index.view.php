@@ -24,13 +24,15 @@
 	<main>
 		<?php foreach($tareas as $tarea): ?>
 			<li> 
-				<?= $tarea['descripcion']; ?>
+				<?= $tarea->descripcion; ?>
 			</li>
 		<?php  endforeach; ?>
 
+<br>
+
 		<?php foreach($tareasC as $tareaC): ?>
 			<li> 
-				<?= $tareaC['descripcion']; ?>
+				<?= $tareaC->descripcion; ?>
 			</li>
 		<?php  endforeach; ?>
 	</main>
