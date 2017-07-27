@@ -15,7 +15,7 @@ class Connection
 			$pdo = new PDO(
 				$config['type'] . ':host=' . $config['host'] .';dbname=' .$config['name'] , 
 				$config['user'], 
-				$config['pass']
+				$config['pass'],
 				array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
 				//AL indicar estas opciones se activan los mensajes de error de la base de datos.
 				);

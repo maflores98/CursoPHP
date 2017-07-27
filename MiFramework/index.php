@@ -1,14 +1,9 @@
 <?php
 	
-$qry=require 'bootstrap.php';
+require 'core/bootstrap.php';
 
-//$pdo =conectarBD();
-$tareas=$qry->selectAll('tareas1', 'Tarea');
-$asignados=$qry->selectAll('asignados', 'Asignado');
+require 'routes.php';
+$router = new Router();
+$router->define($routes);
 
-//dd($tareas);
-
-
-
-require 'index.view.php';
-
+require $router->direct(Request::uri());
