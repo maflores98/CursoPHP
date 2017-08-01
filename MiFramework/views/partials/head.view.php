@@ -11,3 +11,5 @@
     </head>
 
     <body>
+    <?php require 'nav.view.php'; ?>
+    <div class="container">

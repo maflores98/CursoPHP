@@ -1,7 +1,7 @@
 <?php
 
 $routes = array(
-	'' => 'controllers/index.php',
+	'' => 'controllers/inicio.php',
 	'acerca' => 'controllers/acerca.php',
 	'contacto' => 'controllers/contacto.php'
 	);
